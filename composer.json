@@ -1,0 +1,30 @@
+{
+  "name": "iamraghavan/rj-geo-locator",
+  "description": "Laravel package to manage country, state, and city data with dynamic form elements and REST API.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Raghavan Jeeva",
+      "email": "ragahvan@bumblebees.co.in"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^8.0|^9.0|^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "iamraghavan\\CountryStateCity\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "iamraghavan\\CountryStateCity\\CountryStateCityServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
