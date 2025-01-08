@@ -18,7 +18,7 @@
       "iamraghavan\\CountryStateCity\\": "src/"
     },
     "files": [
-      "app/Helpers/helper.php"
+      "vendor/iamraghavan/rj-geo-locator/src/Helpers/helper.php"
     ]
   },
   "extra": {
