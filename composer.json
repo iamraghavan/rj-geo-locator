@@ -16,7 +16,10 @@
   "autoload": {
     "psr-4": {
       "iamraghavan\\CountryStateCity\\": "src/"
-    }
+    },
+    "files": [
+      "app/Helpers/GeoHelper.php"
+    ]
   },
   "extra": {
     "laravel": {
