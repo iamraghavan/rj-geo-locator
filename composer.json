@@ -18,7 +18,7 @@
       "iamraghavan\\CountryStateCity\\": "src/"
     },
     "files": [
-      "vendor/iamraghavan/rj-geo-locator/src/Helpers/helper.php"
+      "src/Helpers/helper.php"  // Correct path to the helper file based on your repository structure
     ]
   },
   "extra": {
