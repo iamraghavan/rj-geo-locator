@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "^8.0",
-    "illuminate/support": "^8.0|^9.0|^10.0"
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0"
   },
   "autoload": {
     "psr-4": {
@@ -52,7 +52,5 @@
   "suggest": {
     "illuminate/database": "Optional package for database usage with models.",
     "guzzlehttp/guzzle": "Optional dependency for making API requests."
-  },
-  "minimum-stability": "stable",
-  "prefer-stable": true
+  }
 }
