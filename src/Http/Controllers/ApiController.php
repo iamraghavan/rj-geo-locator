@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use iamraghavan\CountryStateCity\Models\Country;
 use iamraghavan\CountryStateCity\Models\State;
 use iamraghavan\CountryStateCity\Models\City;
+use Illuminate\Routing\Controller;  // Add this line to import the Controller class
 
 class ApiController extends Controller
 {
