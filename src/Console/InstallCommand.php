@@ -13,7 +13,8 @@ class InstallCommand extends Command
 
     public function handle()
     {
-        $sqlPath = __DIR__ . '/../../Database/SQL';
+        // Get the correct path to the SQL files in the root 'Database/SQL' folder
+        $sqlPath = base_path('Database/SQL');
         $files = ['countries.sql', 'states.sql', 'cities.sql'];
 
         foreach ($files as $file) {
