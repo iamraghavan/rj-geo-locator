@@ -7,41 +7,30 @@ use iamraghavan\CountryStateCity\Models\Country;
 use iamraghavan\CountryStateCity\Models\State;
 use iamraghavan\CountryStateCity\Models\City;
 use Illuminate\Routing\Controller;
-
+// Ragahvan Jeeva
 class ApiController extends Controller
 {
+    // Fetch all countries without pagination
     public function countries(Request $request)
     {
-        // Check if pagination parameter is set, and use paginate if true
-        if ($request->has('paginate') && $request->paginate == 'false') {
-            return Country::all();  // Return all countries if no pagination is needed
-        }
+        $countries = Country::all(); // Fetch all countries without pagination
 
-        // Default: Paginate countries
-        return Country::paginate(config('countrystatecity.pagination'));
+        return response()->json($countries);
     }
 
+    // Fetch states based on selected country without pagination
     public function states(Request $request, $country_id)
     {
-        // Check if pagination parameter is set, and use paginate if true
-        if ($request->has('paginate') && $request->paginate == 'false') {
-            return State::where('country_id', $country_id)->get();  // Return all states without pagination
-        }
+        $states = State::where('country_id', $country_id)->get(); // Fetch all states of the country without pagination
 
-        // Default: Paginate states
-        return State::where('country_id', $country_id)
-            ->paginate(config('countrystatecity.pagination'));
+        return response()->json($states);
     }
 
+    // Fetch cities based on selected state without pagination
     public function cities(Request $request, $state_id)
     {
-        // Check if pagination parameter is set, and use paginate if true
-        if ($request->has('paginate') && $request->paginate == 'false') {
-            return City::where('state_id', $state_id)->get();  // Return all cities without pagination
-        }
+        $cities = City::where('state_id', $state_id)->get(); // Fetch all cities of the state without pagination
 
-        // Default: Paginate cities
-        return City::where('state_id', $state_id)
-            ->paginate(config('countrystatecity.pagination'));
+        return response()->json($cities);
     }
 }
