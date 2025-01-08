@@ -18,7 +18,7 @@
       "iamraghavan\\CountryStateCity\\": "src/"
     },
     "files": [
-      "src/Helpers/helper.php"  // Correct path to the helper file based on your repository structure
+      "src/Helpers/helper.php"
     ]
   },
   "extra": {
