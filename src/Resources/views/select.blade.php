@@ -3,6 +3,8 @@
         class="{{ config('countrystatecity.select.class') }}">
     <option value="">Select {{ ucfirst($type) }}</option>
     @foreach ($options as $option)
-        <option value="{{ $option->id }}">{{ $option->name }}</option>
+        <option value="{{ $option->id }}" {{ $selectedId == $option->id ? 'selected' : '' }}>
+            {{ $option->name }}
+        </option>
     @endforeach
 </select>
